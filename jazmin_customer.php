@@ -39,7 +39,7 @@ if(count($sqlFilterArray) > 0)
 
 $totalRecords = 0;
 
-echo $sql = "SELECT customerName, customerAlias, customerAddress, customerPhone, customerEmail, tinNumber, customerFax, customerContactPerson, status FROM sales_customer ".$sqlFilter."";
+$sql = "SELECT customerName, customerAlias, customerAddress, customerPhone, customerEmail, tinNumber, customerFax, customerContactPerson, status FROM sales_customer ".$sqlFilter."";
 $sqlFilter = trim(preg_replace('/\s+/', ' ', $sqlFilter));
 $query = $db->query($sql);
 if($query AND $query->num_rows > 0)
